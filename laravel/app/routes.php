@@ -13,5 +13,26 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+    return View::make('hello');
+});
+
+Route::get('/articulos', function()
+{
+    return View::make('items');
+});
+
+Route::get('/items', function()
+{
+    return View::make('items');
+});
+
+Route::get('/test', function()
+{
+    $data = Input::all();
+    var_dump($data);
+});
+
+Route::get('/info', function()
+{
+    phpinfo();
 });
